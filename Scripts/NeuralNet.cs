@@ -1,4 +1,15 @@
-﻿using System;
+﻿/// Bird by Example Neural Net (Recursive Capabilities)
+/// 
+/// Noah James Burkholder 2020 (MIT License)
+/// 
+/// Made using the help of various people including:
+/// 
+/// Andrej Karpathy — "The Unreasonable Effectiveness of Recurrent Neural Networks"
+/// Grant Sanderson (3Blue1Brown) — "Deep Learning" series on Youtube.
+/// Sebastian Lague — "Neural Networks" series on Youtube.
+/// Cary Huang (CaryKH) — Inspiring me to get into machine learning with his project "Evolv.io".
+
+using System;
 using UnityEngine;
 using UnityEngine.Profiling;
 /// <summary>
@@ -137,7 +148,6 @@ public class NeuralNet {
     public float[] netOutput; // Cache for always-accessible output.
     public int[] layerDimensions; // Array with number of activations in each layer.
     private Layer[] layers; //layers in the network
-    //private Layer inputLayer;
     public bool isFullyInitialized = false;
     public bool isFirstHidden = false;
     /// <summary>
