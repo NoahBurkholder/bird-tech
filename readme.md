@@ -40,6 +40,6 @@ I also did a bit of work in Blender to finish the bird model and gave some basic
 
 More sections soon!
 
-![Physics animation system.](4-BirdPhysics.gif)
+![Physics animation system.](Images/4-BirdPhysics.gif)
 
-![Reactive physics test.](5-BirdBonk.gif)
+![Reactive physics test.](Images/5-BirdBonk.gif)
