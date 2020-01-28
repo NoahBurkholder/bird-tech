@@ -14,13 +14,13 @@ I began Bird by Example in April 2019 (known back then as 'BirdTest'), and over 
 
 ### April 4th, 2019
 
-![First known .gif of the birds.][Images/1-BirdsApril04.gif]
+![First known .gif of the birds.](Images/1-BirdsApril04.gif)
 
 This was the first .gif of the project I ever made. It was right after I got my first feed-forward network to work. The movement code was super badly integrated at this point, and I would later find that my trigonometry was slightly sub-optimal for bird steering.
 
 ### April 8th, 2019
 
-![Second .gif of development milestone][Images/2-BirdsApril08.gif]
+![Second .gif of development milestone](Images/2-BirdsApril08.gif)
 
 At this point I had worked out some issues with steering, and future-proofed a few perceptrons. I also began working on teacher-student learning wherein birds would choose a bird in their vicinity to focus on and try to optimize their own neurology to this teacher bird. This is why their eyes are now moving to look at the other birds around them.
 
@@ -30,7 +30,7 @@ Certain birds might get isolated from the flock, and would retain individualism 
 
 ### April 10th, 2019
 
-![Third .gif of birds.][Images/3-BirdsApril10.gif]
+![Third .gif of birds.](Images/3-BirdsApril10.gif)
 
 At this third stage in development, all the systems came together in their most basic form, and the birds were able to reach neurological consensus! I could randomize their neurologies, and over the course of a couple minutes the entire population would begin to follow a particular doctrine. Practically though, it just meant birds would run clockwise or counter-clockwise.
 
@@ -40,6 +40,6 @@ I also did a bit of work in Blender to finish the bird model and gave some basic
 
 More sections soon!
 
-![Physics animation system.][4-BirdPhysics.gif]
+![Physics animation system.](4-BirdPhysics.gif)
 
-![Reactive physics test.][5-BirdBonk.gif]
+![Reactive physics test.](5-BirdBonk.gif)
