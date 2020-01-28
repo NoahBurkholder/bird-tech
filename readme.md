@@ -8,6 +8,38 @@ Specifically:
 
 I'll update this repo from time to time if there's a script which people are asking about. I talk a fair bit about the systems on my [Discord](https://discord.gg/UWeXjUf) so sometimes it makes sense to link to a public codebase.
 
-Cheers,
+## The Journey
 
-Noah
+I began Bird by Example in April 2019 (known back then as 'BirdTest'), and over the course of a week — listening to [Steve Reich](https://youtu.be/02hnXKDR4tg) for 13 hours a day — got a somewhat functional C# Neural Net with backpropagation.
+
+### April 4th, 2019
+
+![First known .gif of the birds.][Images/1-BirdsApril04.gif]
+
+This was the first .gif of the project I ever made. It was right after I got my first feed-forward network to work. The movement code was super badly integrated at this point, and I would later find that my trigonometry was slightly sub-optimal for bird steering.
+
+### April 8th, 2019
+
+![Second .gif of development milestone][Images/2-BirdsApril08.gif]
+
+At this point I had worked out some issues with steering, and future-proofed a few perceptrons. I also began working on teacher-student learning wherein birds would choose a bird in their vicinity to focus on and try to optimize their own neurology to this teacher bird. This is why their eyes are now moving to look at the other birds around them.
+
+Don't mind the arms, I was figuring some stuff out.
+
+Certain birds might get isolated from the flock, and would retain individualism in their neurology until they stumbled back home and got caught by peer-pressure.
+
+### April 10th, 2019
+
+![Third .gif of birds.][Images/3-BirdsApril10.gif]
+
+At this third stage in development, all the systems came together in their most basic form, and the birds were able to reach neurological consensus! I could randomize their neurologies, and over the course of a couple minutes the entire population would begin to follow a particular doctrine. Practically though, it just meant birds would run clockwise or counter-clockwise.
+
+I also did a bit of work in Blender to finish the bird model and gave some basic animations.
+
+### Under Construction
+
+More sections soon!
+
+![Physics animation system.][4-BirdPhysics.gif]
+
+![Reactive physics test.][5-BirdBonk.gif]
