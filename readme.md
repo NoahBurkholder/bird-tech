@@ -8,6 +8,9 @@ Specifically:
 3. ([BirdBody.cs](Scripts/BirdBody.cs)) The body of a bird. Manages health, RPG stats, and visuals.
 4. ([Pool.cs](Scripts/Pool.cs)) Singleton designed to dynamically organize and recycle gameplay objects to avoid waste. Keeps track of Objects, Particles, and Debris, which are all recycled slightly differently. Script will change as new systems are implemented.
 5. ([Thumbnailer.cs](Scripts/Thumbnailer.cs)) This class takes passport photos for each bird using a secondary invisible camera. Pictures are then exported to disk with an ID that ties them to a bird. These thumbnails will then be used in a type of Pokedex system, but for birds.
+6. ([Interactable.cs](Scripts/Interactable.cs)) A GameObject which birds react neurologically to (based on what it 'evokes'). These evokes afford birds to transfer skills and behaviours based on shared attributes on disparate objects. Also holds information about its physical properties.
+7. ([Flora.cs](Scripts/Flora.cs)) Fruit-bearing flora script. An example of the Pool.cs being used to recycle fruit.
+8. ([Qualities.cs](Scripts/Qualities.cs)) Helper script which outlines the different qualities which Interactable.cs (and child classes) can evoke.
 
 I'll update this repo from time to time if there's a script which people are asking about. I talk a fair bit about the systems on my [Discord](https://discord.gg/UWeXjUf) so sometimes it makes sense to link to a public codebase.
 

@@ -105,7 +105,7 @@ public class BirdIdentity
     /// <summary>
     /// Returns a numerical value indicating the instanced bird's reactionary attitude to a contextual 'quality' with additional context of internal or external ideals.
     /// </summary>
-    public float GetAttitude(Ideal ideal, Quality quality)
+    public float GetAttitude(Ideal ideal, Qualities.Quality quality)
     {
         return attitudes[(int)quality, (int)ideal];
     }
@@ -120,308 +120,308 @@ public class BirdIdentity
         switch (a)
         {
             case Archetype.Soldier:
-                attitudes[(int)Ideal.Self, (int)Quality.Combat] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Combat] = LIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Combat] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Combat] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Combat] = LIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Combat] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Cowardice] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Cowardice] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Cowardice] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Cowardice] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Cowardice] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Cowardice] = HATES;
 
                 return selectedPersonality;
             case Archetype.Gatherer:
-                attitudes[(int)Ideal.Self, (int)Quality.Gathering] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Gathering] = LIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Gathering] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Gathering] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Gathering] = LIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Gathering] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Wealth] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Wealth] = LIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Wealth] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Wealth] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Wealth] = LIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Wealth] = LOVES;
 
                 return selectedPersonality;
             case Archetype.Leader:
-                attitudes[(int)Ideal.Self, (int)Quality.Development] = LIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Development] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Development] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Development] = LIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Development] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Development] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Wealth] = LIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Wealth] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Wealth] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Wealth] = LIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Wealth] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Wealth] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Power] = LIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Power] = DISLIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Power] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Power] = LIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Power] = DISLIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Power] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Deceit] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Deceit] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Deceit] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Deceit] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Deceit] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Deceit] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Divine] = DISLIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Divine] = LIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Divine] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Divine] = DISLIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Divine] = LIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Divine] = LIKES;
                 return selectedPersonality;
             case Archetype.Maniac:
-                attitudes[(int)Ideal.Self, (int)Quality.Power] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Power] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Power] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Power] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Power] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Power] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Magic] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Magic] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Magic] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Magic] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Magic] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Magic] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Unknowable] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Unknowable] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Unknowable] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Unknowable] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Unknowable] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Unknowable] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Divine] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Divine] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Divine] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Divine] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Divine] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Divine] = HATES;
                 return selectedPersonality;
             case Archetype.Doctor:
-                attitudes[(int)Ideal.Self, (int)Quality.Death] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Death] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Death] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Death] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Death] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Death] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Suffering] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Suffering] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Suffering] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Suffering] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Suffering] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Suffering] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Cowardice] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Cowardice] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Cowardice] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Cowardice] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Cowardice] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Cowardice] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Divine] = DISLIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Divine] = DISLIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Divine] = DISLIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Divine] = DISLIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Divine] = DISLIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Divine] = DISLIKES;
                 return selectedPersonality;
             case Archetype.Socialite:
-                attitudes[(int)Ideal.Self, (int)Quality.Company] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Company] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Company] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Company] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Company] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Company] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Development] = LIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Development] = LIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Development] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Development] = LIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Development] = LIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Development] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Cowardice] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Cowardice] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Cowardice] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Cowardice] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Cowardice] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Cowardice] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Combat] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Combat] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Combat] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Combat] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Combat] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Combat] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Divine] = DISLIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Divine] = DISLIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Divine] = DISLIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Divine] = DISLIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Divine] = DISLIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Divine] = DISLIKES;
                 return selectedPersonality;
             case Archetype.Criminal:
-                attitudes[(int)Ideal.Self, (int)Quality.Deceit] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Deceit] = AVOIDS;
-                attitudes[(int)Ideal.Society, (int)Quality.Deceit] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Deceit] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Deceit] = AVOIDS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Deceit] = LIKES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Company] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Company] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Company] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Company] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Company] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Company] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Development] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Development] = NEUTRAL;
-                attitudes[(int)Ideal.Society, (int)Quality.Development] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Development] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Development] = NEUTRAL;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Development] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Divine] = LIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Divine] = LIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Divine] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Divine] = LIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Divine] = LIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Divine] = LIKES;
                 return selectedPersonality;
             case Archetype.Ascetic:
-                attitudes[(int)Ideal.Self, (int)Quality.Suffering] = NEUTRAL;
-                attitudes[(int)Ideal.Others, (int)Quality.Suffering] = NEUTRAL;
-                attitudes[(int)Ideal.Society, (int)Quality.Suffering] = NEUTRAL;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Suffering] = NEUTRAL;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Suffering] = NEUTRAL;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Suffering] = NEUTRAL;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Death] = AVOIDS;
-                attitudes[(int)Ideal.Others, (int)Quality.Death] = NEUTRAL;
-                attitudes[(int)Ideal.Society, (int)Quality.Death] = NEUTRAL;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Death] = AVOIDS;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Death] = NEUTRAL;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Death] = NEUTRAL;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Unknowable] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Unknowable] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Unknowable] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Unknowable] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Unknowable] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Unknowable] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Curiosity] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Curiosity] = LEANS;
-                attitudes[(int)Ideal.Society, (int)Quality.Curiosity] = LEANS;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Curiosity] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Curiosity] = LEANS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Curiosity] = LEANS;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Magic] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Magic] = LEANS;
-                attitudes[(int)Ideal.Society, (int)Quality.Magic] = LEANS;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Magic] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Magic] = LEANS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Magic] = LEANS;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Crafts] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Crafts] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Crafts] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Crafts] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Crafts] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Crafts] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Divine] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Divine] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Divine] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Divine] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Divine] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Divine] = LOVES;
                 return selectedPersonality;
             case Archetype.Explorer:
-                attitudes[(int)Ideal.Self, (int)Quality.Curiosity] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Curiosity] = AVOIDS;
-                attitudes[(int)Ideal.Society, (int)Quality.Curiosity] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Curiosity] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Curiosity] = AVOIDS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Curiosity] = LIKES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Wealth] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Wealth] = AVOIDS;
-                attitudes[(int)Ideal.Society, (int)Quality.Wealth] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Wealth] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Wealth] = AVOIDS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Wealth] = LIKES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Gathering] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Gathering] = AVOIDS;
-                attitudes[(int)Ideal.Society, (int)Quality.Gathering] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Gathering] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Gathering] = AVOIDS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Gathering] = LIKES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Destiny] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Destiny] = AVOIDS;
-                attitudes[(int)Ideal.Society, (int)Quality.Destiny] = AVOIDS;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Destiny] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Destiny] = AVOIDS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Destiny] = AVOIDS;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Nature] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Nature] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Nature] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Nature] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Nature] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Nature] = LOVES;
                 return selectedPersonality;
             case Archetype.Sadist:
-                attitudes[(int)Ideal.Self, (int)Quality.Suffering] = AVOIDS;
-                attitudes[(int)Ideal.Others, (int)Quality.Suffering] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Suffering] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Suffering] = AVOIDS;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Suffering] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Suffering] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Death] = DISLIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Death] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Death] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Death] = DISLIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Death] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Death] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Power] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Power] = DISLIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Power] = DISLIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Power] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Power] = DISLIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Power] = DISLIKES;
 
                 return selectedPersonality;
             case Archetype.Hustler:
-                attitudes[(int)Ideal.Self, (int)Quality.Wealth] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Wealth] = AVOIDS;
-                attitudes[(int)Ideal.Society, (int)Quality.Wealth] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Wealth] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Wealth] = AVOIDS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Wealth] = LIKES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Gathering] = LIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Gathering] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Gathering] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Gathering] = LIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Gathering] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Gathering] = LIKES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Crafts] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Crafts] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Crafts] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Crafts] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Crafts] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Crafts] = LOVES;
 
 
-                attitudes[(int)Ideal.Self, (int)Quality.Power] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Power] = AVOIDS;
-                attitudes[(int)Ideal.Society, (int)Quality.Power] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Power] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Power] = AVOIDS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Power] = LIKES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Destiny] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Destiny] = AVOIDS;
-                attitudes[(int)Ideal.Society, (int)Quality.Destiny] = AVOIDS;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Destiny] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Destiny] = AVOIDS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Destiny] = AVOIDS;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Nature] = DISLIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Nature] = DISLIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Nature] = DISLIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Nature] = DISLIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Nature] = DISLIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Nature] = DISLIKES;
                 return selectedPersonality;
             case Archetype.Hunter:
-                attitudes[(int)Ideal.Self, (int)Quality.Death] = DISLIKES;
-                attitudes[(int)Ideal.Others, (int)Quality.Death] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Death] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Death] = DISLIKES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Death] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Death] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Suffering] = AVOIDS;
-                attitudes[(int)Ideal.Others, (int)Quality.Suffering] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Suffering] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Suffering] = AVOIDS;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Suffering] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Suffering] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Gathering] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Gathering] = AVOIDS;
-                attitudes[(int)Ideal.Society, (int)Quality.Gathering] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Gathering] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Gathering] = AVOIDS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Gathering] = LIKES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Nature] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Nature] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Nature] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Nature] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Nature] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Nature] = LOVES;
                 return selectedPersonality;
             case Archetype.Glutton:
-                attitudes[(int)Ideal.Self, (int)Quality.Famine] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Famine] = LIKES;
-                attitudes[(int)Ideal.Society, (int)Quality.Famine] = LIKES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Famine] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Famine] = LIKES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Famine] = LIKES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Wealth] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Wealth] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Wealth] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Wealth] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Wealth] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Wealth] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Gathering] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Gathering] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Gathering] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Gathering] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Gathering] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Gathering] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Nature] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Nature] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Nature] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Nature] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Nature] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Nature] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Confinement] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Confinement] = LEANS;
-                attitudes[(int)Ideal.Society, (int)Quality.Confinement] = LEANS;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Confinement] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Confinement] = LEANS;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Confinement] = LEANS;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Development] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Development] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Development] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Development] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Development] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Development] = LOVES;
                 return selectedPersonality;
             case Archetype.Cultist:
-                attitudes[(int)Ideal.Self, (int)Quality.Unknowable] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Unknowable] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Unknowable] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Unknowable] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Unknowable] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Unknowable] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Divine] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Divine] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Divine] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Divine] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Divine] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Divine] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Destiny] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Destiny] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Destiny] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Destiny] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Destiny] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Destiny] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Death] = NEUTRAL;
-                attitudes[(int)Ideal.Others, (int)Quality.Death] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Death] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Death] = NEUTRAL;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Death] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Death] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Suffering] = AVOIDS;
-                attitudes[(int)Ideal.Others, (int)Quality.Suffering] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Suffering] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Suffering] = AVOIDS;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Suffering] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Suffering] = LOVES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Development] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Development] = LOVES;
-                attitudes[(int)Ideal.Society, (int)Quality.Development] = LOVES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Development] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Development] = LOVES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Development] = LOVES;
                 return selectedPersonality;
             case Archetype.Hero:
-                attitudes[(int)Ideal.Self, (int)Quality.Cowardice] = HATES;
-                attitudes[(int)Ideal.Others, (int)Quality.Cowardice] = NEUTRAL;
-                attitudes[(int)Ideal.Society, (int)Quality.Cowardice] = NEUTRAL;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Cowardice] = HATES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Cowardice] = NEUTRAL;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Cowardice] = NEUTRAL;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Legacy] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Legacy] = NEUTRAL;
-                attitudes[(int)Ideal.Society, (int)Quality.Legacy] = NEUTRAL;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Legacy] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Legacy] = NEUTRAL;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Legacy] = NEUTRAL;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Destiny] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Destiny] = NEUTRAL;
-                attitudes[(int)Ideal.Society, (int)Quality.Destiny] = NEUTRAL;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Destiny] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Destiny] = NEUTRAL;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Destiny] = NEUTRAL;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Death] = AVOIDS;
-                attitudes[(int)Ideal.Others, (int)Quality.Death] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Death] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Death] = AVOIDS;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Death] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Death] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Suffering] = AVOIDS;
-                attitudes[(int)Ideal.Others, (int)Quality.Suffering] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Suffering] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Suffering] = AVOIDS;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Suffering] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Suffering] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Combat] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Combat] = HATES;
-                attitudes[(int)Ideal.Society, (int)Quality.Combat] = HATES;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Combat] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Combat] = HATES;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Combat] = HATES;
 
-                attitudes[(int)Ideal.Self, (int)Quality.Magic] = LOVES;
-                attitudes[(int)Ideal.Others, (int)Quality.Magic] = NEUTRAL;
-                attitudes[(int)Ideal.Society, (int)Quality.Magic] = NEUTRAL;
+                attitudes[(int)Ideal.Self, (int)Qualities.Quality.Magic] = LOVES;
+                attitudes[(int)Ideal.Others, (int)Qualities.Quality.Magic] = NEUTRAL;
+                attitudes[(int)Ideal.Society, (int)Qualities.Quality.Magic] = NEUTRAL;
 
                 return selectedPersonality;
             case Archetype.Contrarian:
                 // Flips all base values.
-                for (int i = 0; i < Qualities.NumQualities; i++)
+                for (int i = 0; i < Qualities.NUM_QUALITIES; i++)
                 {
                     for (int j = 0; j < NumIdeals; j++)
                     {
