@@ -5,6 +5,9 @@ Hi! I'm just uploading a small number of scripts related to my project [Bird by 
 Specifically:
 1. ([NeuralNet.cs](Scripts/NeuralNet.cs)) The Recurrent Neural Network system I'm using. It's very customized to the weirdness of Bird by Example, but I've commented it extensively to help it make sense.
 2. ([BirdIdentity.cs](Scripts/BirdIdentity.cs)) A script used for introducing fluctuations in contextual perception. In other words: If all birds were to share the same neurology, this script makes bird perceptrons interpret the environment differently. This system will be toggleable in the end product, so that experimentation with social cohesion behaviour is afforded to curious players.
+3. ([BirdBody.cs](Scripts/BirdBody.cs)) The body of a bird. Manages health, RPG stats, and visuals.
+4. ([Pool.cs](Scripts/Pool.cs)) Singleton designed to dynamically organize and recycle gameplay objects to avoid waste. Keeps track of Objects, Particles, and Debris, which are all recycled slightly differently. Script will change as new systems are implemented.
+5. ([Thumbnailer.cs](Scripts/Thumbnailer.cs)) This class takes passport photos for each bird using a secondary invisible camera. Pictures are then exported to disk with an ID that ties them to a bird. These thumbnails will then be used in a type of Pokedex system, but for birds.
 
 I'll update this repo from time to time if there's a script which people are asking about. I talk a fair bit about the systems on my [Discord](https://discord.gg/UWeXjUf) so sometimes it makes sense to link to a public codebase.
 
