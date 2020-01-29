@@ -1,6 +1,6 @@
-﻿/// Bird by Example Neural Net (Recursive Capabilities)
+﻿/// Bird by Example Recurrent Neural Net
 /// 
-/// Noah James Burkholder 2020 (MIT License)
+/// Noah James Burkholder 2020
 /// 
 /// Made using the help of various people including:
 /// 
@@ -8,6 +8,7 @@
 /// Grant Sanderson (3Blue1Brown) — "Deep Learning" series on Youtube.
 /// Sebastian Lague — "Neural Networks" series on Youtube.
 /// Cary Huang (CaryKH) — Inspiring me to get into machine learning with his project "Evolv.io".
+
 
 using System;
 using UnityEngine;
@@ -135,6 +136,13 @@ public class NeuralNet {
         return layers[index].activations.Length;
     }
 
+    // Gets the number of activation nodes within a layer within the RNN.
+    public int GetNumNodesAtPreviousLayer(int index)
+    {
+        return layers[index].precedingActivations.Length;
+    }
+
+
     // Gets the actual activation value at a particular
     public float GetValueAtNeuron (int layerIndex, int neuronIndex) {
         return layers[layerIndex].activations[neuronIndex];
@@ -144,12 +152,13 @@ public class NeuralNet {
         return layers[layerIndex].weights[forwardIndex, backIndex];
     }
 
-    public Bird parentBird; // The bird this RNN belongs to.
-    public float[] netOutput; // Cache for always-accessible output.
-    public int[] layerDimensions; // Array with number of activations in each layer.
+    private Bird parentBird; // The bird this RNN belongs to.
+    private float[] netOutput; // Cache for always-accessible output.
+    private int[] layerDimensions; // Array with number of activations in each layer.
     private Layer[] layers; //layers in the network
-    public bool isFullyInitialized = false;
-    public bool isFirstHidden = false;
+    //private Layer inputLayer;
+    private bool isFullyInitialized = false;
+    private bool isFirstHidden = false;
     /// <summary>
     /// Constructor setting up layers
     /// </summary>
@@ -188,7 +197,7 @@ public class NeuralNet {
     /// High level feed-forward method for this network. This does one cycle of input-output processing.
     /// </summary>
     /// <param name="inputs">Inputs to be fed forward.</param>
-    public float[] FeedForward (Layer inputLayer) {
+    private float[] FeedForward (Layer inputLayer) {
 
         // Feed forward input layer.
         layers[1].FeedForward (inputLayer.activations);
@@ -238,19 +247,19 @@ public class NeuralNet {
     /// Each individual layer in the neural network.
     /// </summary>
     public class Layer {
-        public NeuralNet parentNet;
-        public int numPrecedingActivations; // The number of neurons in the previous layer.
-        public int numActivations; // The number of neurons in this layer.
+        protected NeuralNet parentNet;
+        protected int numPrecedingActivations; // The number of neurons in the previous layer.
+        protected int numActivations; // The number of neurons in this layer.
 
-        public int biasIndex; // The index within activations which holds the bias.
+        protected int biasIndex; // The index within activations which holds the bias.
         public float[] activations; // The values output by this layer, run through an activation function.
         public float[] precedingActivations; // Activations of preceding layer. Think of these as the 'inputs'.
         public float[, ] weights; // Weights to previous layer from this layer
-        public float[, ] weightsDelta; // Change in weights assigned by backprop.
-        public float[] errorDelta; // The calculated error from a layer minus the expected output.
+        protected float[, ] weightsDelta; // Change in weights assigned by backprop.
+        protected float[] errorDelta; // The calculated error from a layer minus the expected output.
         public float[] errorGamma; // The slope or gradient of the error in n-dimensional space. This will create a gradient which can be navigated by the weights.
 
-        public int layerIndex = 0;
+        protected int layerIndex = 0;
 
         /// <summary>
         /// Constructs input layer.
@@ -298,11 +307,13 @@ public class NeuralNet {
             InitilizeWeights (); // Randomize weights.
         }
 
+        // How radical the intial NN weights can be.
         public static float Radicalness = 0.5f;
+
         /// <summary>
         /// Initilize weights between random values.
         /// </summary>
-        public virtual void InitilizeWeights () {
+        protected virtual void InitilizeWeights () {
             for (int i = 0; i < numActivations; i++) {
                 for (int j = 0; j < numPrecedingActivations; j++) {
                     weights[i, j] = (float) UnityEngine.Random.Range (-Radicalness, Radicalness);
@@ -416,10 +427,10 @@ public class NeuralNet {
 
     public class RecurrentLayer : Layer {
 
-        public float[] recurrentValues; // The values which are ready for comparison in the recurrent nodes.
-        public float[] recurrentCache; // Cache for node values in layer before comparison.
-        public float[, ] recurrentWeights; // Weights to recurrent layer from this layer
-        public float[, ] recurrentWeightsDelta; // Change in weights assigned by backprop.
+        private float[] recurrentValues; // The values which are ready for comparison in the recurrent nodes.
+        private float[] recurrentCache; // Cache for node values in layer before comparison.
+        private float[, ] recurrentWeights; // Weights to recurrent layer from this layer
+        private float[, ] recurrentWeightsDelta; // Change in weights assigned by backprop.
 
         /// <summary>
         /// Constructs any layer which isn't the input layer.
@@ -454,7 +465,7 @@ public class NeuralNet {
         /// <summary>
         /// Initilize weights between random values.
         /// </summary>
-        public override void InitilizeWeights () {
+        protected override void InitilizeWeights () {
             for (int forwardIndex = 0; forwardIndex < numActivations; forwardIndex++) {
                 for (int backIndex = 0; backIndex < numPrecedingActivations; backIndex++) // Normal weights.
                 {
